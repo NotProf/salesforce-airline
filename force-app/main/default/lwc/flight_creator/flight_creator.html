@@ -1,0 +1,15 @@
+<template>
+
+  <lightning-input type="date" onchange={onSelectDay} name="date" label="Enter a date" ></lightning-input>
+
+  <lightning-combobox
+    name="plane"
+    label="Planes available on the selected day"
+    value={selectedPlane}
+    placeholder="Select Plane"
+    options={planes}
+    onchange={onSelectPlane} ></lightning-combobox>
+
+
+
+</template>

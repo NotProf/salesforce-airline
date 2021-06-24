@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Passport__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Serial number of passport</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Serial number of passport</inlineHelpText>
+    <label>Passport</label>
+    <length>35</length>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>
