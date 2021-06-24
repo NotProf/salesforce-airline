@@ -76,8 +76,9 @@ export default class TicketCreator extends LightningElement {
             this.flightOptions = result.map(item => ({ label: item.Name, value: item.Id }));
             this.message = "Please select a flight";
           }
+          this.findActualPrice();
 
-        }).catch((error) => this.showNotification("Error", error.message, "error"));
+        }).catch((error) => this.showNotification("Error", JSON.stringify(error.message), "error"));
 
     } else {
 
@@ -153,9 +154,11 @@ export default class TicketCreator extends LightningElement {
 
   findActualPrice() {
 
-    if (this.product2) {
+    if (this.product2 && this.selectedFlight && this.selectedClass) {
       const entry = this.product2[0].PricebookEntries.find((item) => item.Pricebook2.Name.includes(this.selectedClass));
       this.price = entry.UnitPrice;
+    } else  {
+      this.price = null;
     }
   }
 

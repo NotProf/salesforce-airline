@@ -3,3 +3,8 @@
     text-decoration: underline;
     margin-top: 10px;
 }
+
+.price-label {
+    font-size: 14px;
+    font-weight: bold;
+}

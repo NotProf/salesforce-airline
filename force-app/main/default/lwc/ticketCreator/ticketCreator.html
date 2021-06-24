@@ -79,7 +79,9 @@
 
             <div class="slds-col slds-size_1-of-2 slds-align-middle ">
 
-                <div class="slds-text-align_center">Price: {price} </div>
+                <template if:true={price}>
+                  <div class="slds-text-align_center price-label">Price: {price} $ </div>
+                </template>
 
             </div>
 
